@@ -1,0 +1,1 @@
+This is a sample file for demonstrating file transfer using a simulated OSI model in Python. Each layer of the OSI model processes this data before it's transmitted to the server.

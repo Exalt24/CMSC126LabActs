@@ -1,0 +1,18 @@
+Overview:
+This project simulates the seven layers of the OSI model in Python and demonstrates a file transfer using low-level features (socket and basic file I/O). Each layer (Physical, Data Link, Network, Transport, Session, Presentation, Application) adds its own header to the data.
+
+Files:
+- file_transfer_osi.py : Main script for the simulation.
+- send_file.txt        : File to be sent (client side).
+- INSTRUCTIONS.txt     : This file.
+
+How to Run:
+1. Start the Server:
+   Open a terminal and run:
+      python file_transfer_osi.py server
+   (The server listens on 127.0.0.1:5000 and writes data to received_file.txt.)
+
+2. Start the Client:
+   Open another terminal, ensure send_file.txt exists, then run:
+      python file_transfer_osi.py client
+   (The client reads send_file.txt and sends its contents to the server.)
