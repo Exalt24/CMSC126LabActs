@@ -1,14 +1,14 @@
-/* Base Reset and Global Styles */
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: #333;
-  /* Tinted parallax background */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("images/parallax-bg.jpg") center / cover no-repeat fixed;
@@ -17,7 +17,7 @@ body {
   background-position: center;
 }
 
-/* Headings & Paragraphs */
+
 h1, h2, h3 {
   margin-bottom: 10px;
 }
@@ -26,12 +26,12 @@ p {
   margin-bottom: 15px;
 }
 
-/* Hide the checkbox visually (optional) */
+
 #dark-mode-toggle {
   display: none;
 }
 
-/* Toggle Button Styling */
+
 .toggle-button {
   cursor: pointer;
   background: #333;
@@ -43,29 +43,35 @@ p {
   right: 10px;
   z-index: 1000;
   user-select: none;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50px; 
+  height: 50px; 
+  text-align: center;
+  line-height: 0;
 }
 
-/* Default icon (moon) */
+
 .toggle-button::before {
-  content: "\f186"; /* Moon icon */
+  content: "\f186"; 
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-size: 1.5rem;
+  width: 15px; 
+  height: 15px; 
+  margin-top: 15px; 
+  margin-right: 5px; 
 }
 
-/* When toggle is checked, change the icon to sun */
+
 #dark-mode-toggle:checked + nav .toggle-button::before {
-  content: "\f185"; /* Sun icon */
+  content: "\f185";
+  font-size: 1.5rem;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
 }
 
-/* --------------------------------------
-   Your Other Sections (Hero, Skills, etc.)
-   -------------------------------------- */
-
-/* Hero Section */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -123,7 +129,7 @@ p {
   background-color: #333;
 }
 
-/* Skills Section */
+
 #skills {
   padding: 50px 20px;
   text-align: center;
@@ -149,6 +155,7 @@ p {
   border-radius: 8px;
   padding: 20px;
   width: 120px;
+  height: 120px;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -167,10 +174,11 @@ p {
   background: #ccc;
 }
 
-/* Projects Section */
+
 #projects {
   padding: 50px 20px;
   text-align: center;
+  width: 100%;
 }
 
 #projects h2 {
@@ -192,6 +200,7 @@ p {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .project img {
@@ -206,7 +215,7 @@ p {
 .project p {
   margin: 0 15px 15px;
   font-size: 0.9rem;
-  padding: 5px 10px;
+  padding: 1px 8px;
   text-align: justify;
 }
 
@@ -246,22 +255,21 @@ input[type="checkbox"]:checked ~ .read-more-toggle::after {
   transform: scale(1.03);
 }
 
-/* Contact Section */
+
 #contact {
-  padding: 50px 20px;
+  padding: 30px 0px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 #contact h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #808080;
 }
 
 form {
-  max-width: 1000px;
   margin: auto;
-  text-align: left;
+  text-align: center;
 }
 
 fieldset {
@@ -272,21 +280,22 @@ fieldset {
 label {
   display: block;
   margin-bottom: 5px;
-  padding: 5px;
   font-weight: bold;
+  padding: 12px 12px 12px 12px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%;
-  padding: 10px 0;
+  width: 75%;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.3s ease;
   margin-bottom: 10px;
   background: #333;
   color: #fff;
+  padding: 20px 0px 20px 20px;
+  resize: vertical;
 }
 
 input[type="text"]:focus,
@@ -298,7 +307,7 @@ textarea:focus {
 
 ::placeholder {
   color: #ccc;
-  padding: 0 10px;
+  opacity: 0.5;
 }
 
 button {
@@ -307,7 +316,7 @@ button {
   align-items: center;
   background: #333;
   padding: 11px 50px;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
@@ -321,7 +330,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -329,26 +338,56 @@ footer {
   color: #fff;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
-    text-align: center;
-    justify-content: center;
-  }
-  .hero-left {
-    align-items: center;
-    text-align: center;
   }
   .hero-right img {
     height: auto;
   }
-  .skills-list {
-    flex-direction: column;
-    align-items: center;
+  .hero-left button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 0.7rem;
   }
-  form {
-    padding: 0 20px;
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .skill {
+    width: 150px;
+    height: 100px;
+  }
+  .skill figcaption {
+    font-size: 0.8rem;
+  }
+  .projects-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .project {
+    width: 100%;
+    height: auto;
+  }
+  .project h3 {
+    font-size: 1.5rem;
+  }
+  .project p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 459.5px) {
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+  .hero-left h3 {
+    font-size: 1.5rem;
+  }
+  .hero-left p {
+    font-size: 1rem;
+  }
+  .hero-right img {
+    height: 50vh;
   }
 }
 
@@ -361,7 +400,7 @@ footer {
     color: #fff;
   }
   
-  /* Hero Section Button */
+  
   .hero-left button {
     background-color: #000;
     border-color: #fff;
@@ -371,7 +410,7 @@ footer {
     background-color: #333;
   }
   
-  /* Skills Section */
+  
   #skills {
     background: #1e1e1e;
     color: #fff;
@@ -387,7 +426,7 @@ footer {
     background: #444;
   }
   
-  /* Projects Section */
+  
   #projects h2 {
     color: #fff;
   }
@@ -402,7 +441,7 @@ footer {
     color: #fff;
   }
   
-  /* Contact Section */
+  
   #contact {
     background: #1e1e1e;
     color: #fff;
@@ -427,7 +466,6 @@ footer {
     background: #eee;
   }
   
-  /* Footer */
   footer {
     background: #000;
   }
