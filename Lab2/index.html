@@ -16,23 +16,60 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="checkbox" id="dark-mode-toggle" hidden />
+    <!-- <input type="checkbox" id="dark-mode-toggle" hidden />
     <nav>
       <label for="dark-mode-toggle" class="toggle-button"></label>
-    </nav>
+    </nav> -->
 
     <header>
       <section class="hero">
         <section class="hero-left">
-          <p>Hello</p>
-          <h1>I'm <br />Daniel</h1>
+          <p>Hi there, I am</p>
+          <h1>Daniel Cruz</h1>
           <h3>
             A passionate web developer with a keen eye for design based in Cebu
             City, Philippines.
           </h3>
-          <a href="https://dcruzresume.tiiny.site" target="_blank" rel="noopener">
-            <button type="button">Check My Resume</button>
-          </a>
+          <nav class="button-container">
+            <a
+              href="https://dcruzresume.tiiny.site"
+              target="_blank"
+              rel="noopener"
+            >
+              <button type="button">Check My Resume</button>
+            </a>
+
+            <nav class="social-icons">
+              <a
+                href="https://www.facebook.com/theonewhogaveuponhumanity"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://x.com/dankiel_cruz"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dacruz24/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/Exalt24"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </nav>
+          </nav>
         </section>
 
         <figure class="hero-right">
@@ -43,7 +80,6 @@
 
     <main>
       <section id="skills">
-        <h2>My Skills</h2>
         <ul class="skills-list">
           <li>
             <figure class="skill">
@@ -106,6 +142,7 @@
             </figure>
           </li>
         </ul>
+        <h2 data-reflection="Skills">Skills</h2>
       </section>
 
       <section id="projects">
@@ -122,7 +159,7 @@
               <h3>SQAN</h3>
               <p class="project-intro">
                 SQAN is a groundbreaking startup venture to fostering
-                accessibility in the digital realm.
+                accessibility.
               </p>
 
               <input type="checkbox" id="readmore1" hidden />
@@ -151,7 +188,7 @@
               <h3>Servicita</h3>
               <p class="project-intro">
                 Servicita is an innovative local service finder app built with
-                React Native for Android.
+                React.
               </p>
 
               <input type="checkbox" id="readmore2" hidden />
@@ -160,8 +197,8 @@
                 <p>
                   As the lead developer, I drive the ongoing development of this
                   purpose-built platform that seamlessly connects users with
-                  reliable service providers—from plumbing and tutoring to home
-                  cleaning and beyond.
+                  reliable service providers—from plumbing to home cleaning and
+                  beyond.
                 </p>
               </section>
 
@@ -179,8 +216,8 @@
               </figure>
               <h3>Loterya</h3>
               <p class="project-intro">
-                Loterya reimagines Loteria with a uniquely Filipino twist—built
-                using Godot and scripted in GDScript.
+                Loterya reimagines Loteria with a Filipino twist built using
+                Godot.
               </p>
 
               <input type="checkbox" id="readmore3" hidden />
@@ -189,8 +226,8 @@
                 <p>
                   This multiplayer game reimagines the traditional game of
                   Loteria, integrating mechanics similar to Bingo while infusing
-                  vibrant Filipino-inspired imagery. Iconic symbols like the
-                  barong come together to form unique visuals.
+                  vibrant Filipino-inspired imagery. Iconic symbols come
+                  together to form unique visuals.
                 </p>
               </section>
 
@@ -201,27 +238,50 @@
       </section>
 
       <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-          <fieldset>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required />
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            
-            <button type="submit">SEND</button>
-          </fieldset>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="f225a8e7-e116-46a2-9320-28e266b4e519"
+          />
+          <span class="input-container ic1">
+            <input
+              id="name"
+              name="name"
+              class="input"
+              type="text"
+              placeholder=" "
+            />
+            <span class="cut"></span>
+            <label for="name" class="placeholder">Your Name</label>
+          </span>
+          <span class="input-container ic2">
+            <input
+              id="email"
+              name="email"
+              class="input"
+              type="email"
+              placeholder=" "
+            />
+            <span class="cut"></span>
+            <label for="email" class="placeholder">Your Email</label>
+          </span>
+          <span class="input-container ic3">
+            <textarea
+              id="message"
+              name="message"
+              class="input"
+              placeholder=" "
+            ></textarea>
+            <span class="cut cut-long"></span>
+            <label for="message" class="placeholder">Your Message</label>
+          </span>
+          <button type="submit" class="submit">
+            Submit
+            <i class="fa-solid fa-check"></i>
+          </button>
         </form>
       </section>
-      
     </main>
-
-    <footer>
-      <p>&copy; 2025 Daniel Alexis Cruz. All Rights Reserved.</p>
-    </footer>
   </body>
 </html>
